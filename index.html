@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simulador Financiero</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    PRUEBA
+    <article class="contenedor">
+        <section class="simulador seccion">
+            <h1 class="tit-principal">Hola</h1>
+            <p class="desc-principal">Queremos ayudarte a organizar tu dinero y juntos lograr cumplir con el pago de tus deudas financieras. <br>¡Empecemos!</p>
+            <div class="cont-formulario">
+                <div class="cont-input">
+                    <label for="nombre" class="label-input">¿Cómo te llamas?</label>
+                    <input  type="text" name="nombre" id="nombre" class="input">
+                    <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg" alt="imagen del input" class="img-input">
+                </div>
+                <div class="cont-input">
+                    <label for="monto" class="label-input">¿Cuál es el monto de tu crédito? <span class="tooltip" mensaje="El monto es la suma total de dinero que la institución financiera te está prestando y que tendrás que devolver dentro de un plazo determinado pagando una cantidad de interés."><img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg" alt="icono-tooltip" class="icono-tooltip"></span></label>
+                    <input  type="text" name="monto" id="monto" class="input">
+                    <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg" alt="imagen del input" class="img-input">
+                </div>
+                <div class="cont-input">
+                    <label for="cuotas" class="label-input">¿Cuántas cuotas debes pagar? <span class="tooltip" mensaje="El plazo del préstamo es la cantidad de tiempo que tienes para pagar el préstamo."><img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg" alt="icono-tooltip" class="icono-tooltip"></span></label>
+                    <input  type="text" name="cuotas" id="cuotas" class="input">
+                    <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg" alt="imagen del input" class="img-input">
+                </div>
+                <div class="cont-input">
+                    <label for="valor" class="label-input">Cuál es el valor de la cuota? <span class="tooltip" mensaje="Es el pago periódico que te comprometiste a realizar con el fin de devolver el financiamiento que se te otorgó."><img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg" alt="icono-tooltip" class="icono-tooltip"></span></label>
+                    <input  type="text" name="valor" id="valor" class="input">
+                    <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg" alt="imagen del input" class="img-input">
+                </div>
+                <div class="cont-input">
+                    <label for="frecuencia" class="label-input">¿Con qué frecuencia recibes ingresos?</label>
+                    <input  type="text" name="frecuencia" id="frecuencia" class="input">
+                    <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg" alt="imagen del input" class="img-input">
+                </div>
+            </div>
+            <button class="btn-calcular">Calcular</button>
+        </section>
+        <section class="resultado seccion">
+            Res
+        </section>
+    </article>
 </body>
 </html>
