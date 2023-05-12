@@ -54,32 +54,35 @@
                         rentabilidad libre de riesgo a plazos fijos <br> <br><strong>¡Empecemos!</strong></p>
                     <div class="cont-formulario">
                         <div class="cont-input">
-                            <label for="nombre" class="label-input">¿Qué monto deseas invertir?</label>
-                            <input type="text" name="nombre" id="nombre" class="input">
+                            <label for="montoCdt" class="label-input">¿Qué monto deseas invertir?</label>
+                            <input type="tel" name="montoCdt" id="montoCdt" class="input" onkeyup="this.value=Numeros(this.value)" maxlength="12">
                             <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
                                 alt="imagen del input" class="img-input">
                         </div>
                         <div class="cont-input">
-                            <label for="monto" class="label-input">¿A qué plazo deseas invertir tu dinero?<span
+                            <label for="plazoCdt" class="label-input">¿A cuántos meses deseas invertir tu dinero?<span
                                     class="tooltip"
                                     mensaje="El monto es la suma total de dinero que la institución financiera te está prestando y que tendrás que devolver dentro de un plazo determinado pagando una cantidad de interés."><img
                                         src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
                                         alt="icono-tooltip" class="icono-tooltip"></span></label>
-                            <input type="text" name="monto" id="monto" class="input">
+                            <input type="tel" name="plazoCdt" id="plazoCdt" class="input" onkeyup="this.value=Numeros(this.value)" maxlength="2">
                             <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-monto.svg"
                                 alt="imagen del input" class="img-input">
                         </div>
                         <div class="cont-input">
-                            <label for="cuotas" class="label-input">¿Qué tasa te de interés te ofrecen? <span class="tooltip"
+                            <label for="tasaCdt" class="label-input">¿Qué tasa te de interés te ofrecen? (E.A.)<span
+                                    class="tooltip"
                                     mensaje="El plazo del préstamo es la cantidad de tiempo que tienes para pagar el préstamo."><img
                                         src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
                                         alt="icono-tooltip" class="icono-tooltip"></span></label>
-                            <input type="text" name="cuotas" id="cuotas" class="input">
+                            <input type="tel" name="tasaCdt" id="tasaCdt" class="input" onkeyup="this.value=NumerosDecimales(this.value)" maxlength="5">
                             <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
                                 alt="imagen del input" class="img-input">
                         </div>
                     </div>
-                    <button class="btn-calcular">Calcular</button>
+                    <button id="calcular_cdt" class="btn-calcular">Calcular</button>
+                    <div id="resultado_cdt" class="resultado">
+                    </div>
                 </section>
             </article>
 
@@ -88,34 +91,37 @@
                     <h2 class="tit-principal">Simula tu crédito</h2>
                     <p class="desc-principal">Los créditos pueden ser una herramienta útil si sabes manejarla pero debes
                         tener cuidado para usarlos sabiamente. <br> <br><strong>¡Empecemos!</strong></p>
-                        <div class="cont-formulario">
-                            <div class="cont-input">
-                                <label for="nombre" class="label-input">¿Qué monto deseas solicitar?</label>
-                                <input type="text" name="nombre" id="nombre" class="input">
-                                <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
-                                    alt="imagen del input" class="img-input">
-                            </div>
-                            <div class="cont-input">
-                                <label for="monto" class="label-input">¿A qué plazo deseas solicitar tu crédito?<span
-                                        class="tooltip"
-                                        mensaje="El monto es la suma total de dinero que la institución financiera te está prestando y que tendrás que devolver dentro de un plazo determinado pagando una cantidad de interés."><img
-                                            src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
-                                            alt="icono-tooltip" class="icono-tooltip"></span></label>
-                                <input type="text" name="monto" id="monto" class="input">
-                                <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-monto.svg"
-                                    alt="imagen del input" class="img-input">
-                            </div>
-                            <div class="cont-input">
-                                <label for="cuotas" class="label-input">¿Qué tasa te de interés te ofrecen? <span class="tooltip"
-                                        mensaje="El plazo del préstamo es la cantidad de tiempo que tienes para pagar el préstamo."><img
-                                            src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
-                                            alt="icono-tooltip" class="icono-tooltip"></span></label>
-                                <input type="text" name="cuotas" id="cuotas" class="input">
-                                <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
-                                    alt="imagen del input" class="img-input">
-                            </div>
+                    <div class="cont-formulario">
+                        <div class="cont-input">
+                            <label for="montoCredito" class="label-input">¿Qué monto deseas solicitar?</label>
+                            <input type="tel" name="montoCredito" id="montoCredito" class="input" onkeyup="this.value=Numeros(this.value)" maxlength="12">
+                            <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
+                                alt="imagen del input" class="img-input">
                         </div>
-                        <button class="btn-calcular">Calcular</button>
+                        <div class="cont-input">
+                            <label for="plazoCredito" class="label-input">¿A qué plazo deseas solicitar tu crédito?<span
+                                    class="tooltip"
+                                    mensaje="El monto es la suma total de dinero que la institución financiera te está prestando y que tendrás que devolver dentro de un plazo determinado pagando una cantidad de interés."><img
+                                        src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
+                                        alt="icono-tooltip" class="icono-tooltip"></span></label>
+                            <input type="tel" name="plazoCredito" id="plazoCredito" class="input" onkeyup="this.value=Numeros(this.value)" maxlength="2">
+                            <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-monto.svg"
+                                alt="imagen del input" class="img-input">
+                        </div>
+                        <div class="cont-input">
+                            <label for="tasaCredito" class="label-input">¿Qué tasa te de interés te ofrecen? (E.A.)<span
+                                    class="tooltip"
+                                    mensaje="El plazo del préstamo es la cantidad de tiempo que tienes para pagar el préstamo."><img
+                                        src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
+                                        alt="icono-tooltip" class="icono-tooltip"></span></label>
+                            <input type="tel" name="tasaCredito" id="tasaCredito" class="input" onkeyup="this.value=NumerosDecimales(this.value)" maxlength="5">
+                            <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
+                                alt="imagen del input" class="img-input">
+                        </div>
+                    </div>
+                    <button id="calcular_credito" class="btn-calcular">Calcular</button>
+                    <div id="resultado_credito" class="resultado">
+                    </div>
                 </section>
             </article>
 
@@ -127,61 +133,62 @@
                         tus deudas financieras. <br> <br><strong>¡Empecemos!</strong></p>
                     <div class="cont-formulario">
                         <div class="cont-input">
-                            <label for="nombre" class="label-input">¿Cómo te llamas?</label>
-                            <input type="text" name="nombre" id="nombre" class="input">
+                            <label for="nombreAhorro" class="label-input">¿Cómo te llamas?</label>
+                            <input type="text" name="nombreAhorro" id="nombreAhorro" class="input">
                             <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
                                 alt="imagen del input" class="img-input">
                         </div>
                         <div class="cont-input">
-                            <label for="monto" class="label-input">¿Cuál es el monto de tu crédito? <span
+                            <label for="montoAhorro" class="label-input">¿Cuál es el monto de tu crédito? <span
                                     class="tooltip"
                                     mensaje="El monto es la suma total de dinero que la institución financiera te está prestando y que tendrás que devolver dentro de un plazo determinado pagando una cantidad de interés."><img
                                         src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
                                         alt="icono-tooltip" class="icono-tooltip"></span></label>
-                            <input type="text" name="monto" id="monto" class="input">
+                            <input type="tel" name="montoAhorro" id="montoAhorro" class="input" onkeyup="this.value=Numeros(this.value)" maxlength="12">
                             <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-monto.svg"
                                 alt="imagen del input" class="img-input">
                         </div>
                         <div class="cont-input">
-                            <label for="cuotas" class="label-input">¿Cuántas cuotas debes pagar? <span class="tooltip"
+                            <label for="cuotasAhorro" class="label-input">¿Cuántas cuotas debes pagar? <span
+                                    class="tooltip"
                                     mensaje="El plazo del préstamo es la cantidad de tiempo que tienes para pagar el préstamo."><img
                                         src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
                                         alt="icono-tooltip" class="icono-tooltip"></span></label>
-                            <input type="text" name="cuotas" id="cuotas" class="input">
+                            <input type="tel" name="cuotasAhorro" id="cuotasAhorro" class="input" onkeyup="this.value=Numeros(this.value)" maxlength="4">
                             <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
                                 alt="imagen del input" class="img-input">
                         </div>
                         <div class="cont-input">
-                            <label for="valor" class="label-input">¿Cuál es el valor de la cuota? <span class="tooltip"
+                            <label for="valorAhorro" class="label-input">¿Cuál es el valor de la cuota? <span
+                                    class="tooltip"
                                     mensaje="Es el pago periódico que te comprometiste a realizar con el fin de devolver el financiamiento que se te otorgó."><img
                                         src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
                                         alt="icono-tooltip" class="icono-tooltip"></span></label>
-                            <input type="text" name="valor" id="valor" class="input">
+                            <input type="tel" name="valorAhorro" id="valorAhorro" class="input" onkeyup="this.value=Numeros(this.value)" maxlength="10">
                             <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-monto.svg"
                                 alt="imagen del input" class="img-input">
                         </div>
                         <div class="cont-input">
-                            <label for="frecuencia" class="label-input">¿Con qué frecuencia recibes ingresos? <span
-                                    class="tooltip"
+                            <label for="frecuenciaAhorro" class="label-input">¿Con qué frecuencia recibes ingresos?
+                                <span class="tooltip"
                                     mensaje="Es la frecuencia en la cual recibes ingresos de dinero."><img
                                         src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
                                         alt="icono-tooltip" class="icono-tooltip"></span></label>
-                            <select type="text" name="frecuencia" id="frecuencia" class="input">
-                                <option value="Diario" selected>Selecciona una opción</option>
+                            <select name="frecuenciaAhorro" id="frecuenciaAhorro" class="input">
+                                <option value="" selected>Selecciona una opción</option>
                                 <option value="Diario">Diario</option>
-                                <option value="Diario">Semanal</option>
-                                <option value="Diario">Quincenal</option>
-                                <option value="Diario">Mensual</option>
+                                <option value="Semanal">Semanal</option>
+                                <option value="Quincenal">Quincenal</option>
+                                <option value="Mensual">Mensual</option>
                             </select>
                             <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-fecha-hora.svg"
                                 alt="imagen del input" class="img-input">
                         </div>
 
-
-
-
                     </div>
-                    <button class="btn-calcular">Calcular</button>
+                    <button id="calcular_ahorro" class="btn-calcular">Calcular</button>
+                    <div id="resultado_ahorro" class="resultado">
+                    </div>
                 </section>
                 <section class="resultado seccion">
                     <p>Este es el valor que debes ahorrar</p>
@@ -195,7 +202,8 @@
             <article id="consejos_ahorro" class="contenedor">
                 <section class="resultado seccion">
                     <h2 class="tit-principal">Estos son nuestros consejos</h2>
-                    <p class="desc-principal">Queremos compartirte algunas recomendaciones para el manejo de todas tus finanzas <br> <br><strong>¡Empecemos!</strong></p>
+                    <p class="desc-principal">Queremos compartirte algunas recomendaciones para el manejo de todas tus
+                        finanzas <br> <br><strong>¡Empecemos!</strong></p>
                     <div class="cont-formulario">
                         <div class="contenedor-consejos">
                             <div class="consejo">
