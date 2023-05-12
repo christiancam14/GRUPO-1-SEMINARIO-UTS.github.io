@@ -4,132 +4,180 @@
 <head>
     <meta charset="UTF-8">
     <title>Mi Sitio Web</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="index.css">
 </head>
-<link rel="stylesheet" href="style.css">
 
 <body>
     <header>
-        <a href="#" class="titulo">Simuladores</a>
+        <div class="contenedor-1200">
 
-        <input type="checkbox" name="menu" id="menu" class="input-menu">
-        <label for="menu" class="icono-menu">
-            <img src="https://crezcamos.com/wp-content/uploads/2022/02/menu-hamburguesa.svg" alt="">
-            <p class="cerrar-menu">X</p>
-        </label>
-        <nav class="menu-principal">
-            <ul>
-                <li><a href="#">CDT</a></li>
-                <li><a href="#">Crédito</a></li>
-                <li><a href="#">Ahorro</a></li>
-                <li><a href="#">Tips financieros</a></li>
-            </ul>
-        </nav>
+            <a href="#" class="titulo">Simuladores</a>
+
+            <input type="checkbox" name="menu" id="menu" class="input-menu">
+            <label for="menu" class="icono-menu">
+                <img src="https://crezcamos.com/wp-content/uploads/2022/02/menu-hamburguesa.svg" alt="">
+                <p class="cerrar-menu">X</p>
+            </label>
+            <nav class="menu-principal">
+                <ul>
+
+                    <li>
+                        <input type="radio" id="opcionCdt" name="opcion_simulador" value="0" checked>
+                        <label for="opcionCdt">CDT</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="opcionCredito" name="opcion_simulador" value="1">
+                        <label for="opcionCredito">Crédito</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="opcionAhorro" name="opcion_simulador" value="2">
+                    <label for="opcionAhorro">Ahorro</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="opcionTips" name="opcion_simulador" value="3">
+                        <label for="opcionTips">Tips financieros</label>
+                    </li> 
+
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <!-- Aquí va el contenido principal de la página -->
-        <article id="simulador_ahorro" class="contenedor">
-            <section class="simulador seccion">
-                <h1 class="tit-principal">Hola</h1>
-                <p class="desc-principal">Queremos ayudarte a organizar tu dinero y juntos lograr cumplir con el pago de
-                    tus deudas financieras. <br>¡Empecemos!</p>
-                <div class="cont-formulario">
-                    <div class="cont-input">
-                        <label for="nombre" class="label-input">¿Cómo te llamas?</label>
-                        <input type="text" name="nombre" id="nombre" class="input">
-                        <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
-                            alt="imagen del input" class="img-input">
+        <div class="contenedor-1200">
+            <!-- Aquí va el contenido principal de la página -->
+            <article id="simulador_cdt" class="contenedor">
+                <section class="simulador seccion">
+                    <h1 class="tit-principal">Simula tu CDT</h1>
+                    <p class="desc-principal">Queremos ayudarte a organizar tu dinero y juntos lograr cumplir con el
+                        pago de
+                        tus deudas financieras. <br>¡Empecemos!</p>
+                    <div class="cont-formulario">
                     </div>
-                    <div class="cont-input">
-                        <label for="monto" class="label-input">¿Cuál es el monto de tu crédito? <span class="tooltip"
-                                mensaje="El monto es la suma total de dinero que la institución financiera te está prestando y que tendrás que devolver dentro de un plazo determinado pagando una cantidad de interés."><img
-                                    src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
-                                    alt="icono-tooltip" class="icono-tooltip"></span></label>
-                        <input type="text" name="monto" id="monto" class="input">
-                        <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-monto.svg"
-                            alt="imagen del input" class="img-input">
+                </section>
+            </article>
+
+            <article id="simulador_credito" class="contenedor">
+                <section class="simulador seccion">
+                    <h1 class="tit-principal">Simula tu crédito</h1>
+                    <p class="desc-principal">Queremos ayudarte a organizar tu dinero y juntos lograr cumplir con el
+                        pago de
+                        tus deudas financieras. <br>¡Empecemos!</p>
+                    <div class="cont-formulario">
                     </div>
-                    <div class="cont-input">
-                        <label for="cuotas" class="label-input">¿Cuántas cuotas debes pagar? <span class="tooltip"
-                                mensaje="El plazo del préstamo es la cantidad de tiempo que tienes para pagar el préstamo."><img
-                                    src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
-                                    alt="icono-tooltip" class="icono-tooltip"></span></label>
-                        <input type="text" name="cuotas" id="cuotas" class="input">
-                        <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
-                            alt="imagen del input" class="img-input">
-                    </div>
-                    <div class="cont-input">
-                        <label for="valor" class="label-input">¿Cuál es el valor de la cuota? <span class="tooltip"
-                                mensaje="Es el pago periódico que te comprometiste a realizar con el fin de devolver el financiamiento que se te otorgó."><img
-                                    src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
-                                    alt="icono-tooltip" class="icono-tooltip"></span></label>
-                        <input type="text" name="valor" id="valor" class="input">
-                        <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-monto.svg"
-                            alt="imagen del input" class="img-input">
-                    </div>
-                    <div class="cont-input">
-                        <label for="frecuencia" class="label-input">¿Con qué frecuencia recibes ingresos? <span
-                                class="tooltip" mensaje="Es la frecuencia en la cual recibes ingresos de dinero."><img
-                                    src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
-                                    alt="icono-tooltip" class="icono-tooltip"></span></label>
-                        <select type="text" name="frecuencia" id="frecuencia" class="input">
-                            <option value="Diario" selected>Selecciona una opción</option>
-                            <option value="Diario">Diario</option>
-                            <option value="Diario">Semanal</option>
-                            <option value="Diario">Quincenal</option>
-                            <option value="Diario">Mensual</option>
-                        </select>
-                        <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-fecha-hora.svg"
-                            alt="imagen del input" class="img-input">
-                    </div>
+                </section>
+            </article>
+
+            <article id="simulador_ahorro" class="contenedor">
+                <section class="simulador seccion">
+                    <h1 class="tit-principal">Simula tu ahorro</h1>
+                    <p class="desc-principal">Queremos ayudarte a organizar tu dinero y juntos lograr cumplir con el
+                        pago de
+                        tus deudas financieras. <br>¡Empecemos!</p>
+                    <div class="cont-formulario">
+                        <div class="cont-input">
+                            <label for="nombre" class="label-input">¿Cómo te llamas?</label>
+                            <input type="text" name="nombre" id="nombre" class="input">
+                            <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
+                                alt="imagen del input" class="img-input">
+                        </div>
+                        <div class="cont-input">
+                            <label for="monto" class="label-input">¿Cuál es el monto de tu crédito? <span
+                                    class="tooltip"
+                                    mensaje="El monto es la suma total de dinero que la institución financiera te está prestando y que tendrás que devolver dentro de un plazo determinado pagando una cantidad de interés."><img
+                                        src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
+                                        alt="icono-tooltip" class="icono-tooltip"></span></label>
+                            <input type="text" name="monto" id="monto" class="input">
+                            <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-monto.svg"
+                                alt="imagen del input" class="img-input">
+                        </div>
+                        <div class="cont-input">
+                            <label for="cuotas" class="label-input">¿Cuántas cuotas debes pagar? <span class="tooltip"
+                                    mensaje="El plazo del préstamo es la cantidad de tiempo que tienes para pagar el préstamo."><img
+                                        src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
+                                        alt="icono-tooltip" class="icono-tooltip"></span></label>
+                            <input type="text" name="cuotas" id="cuotas" class="input">
+                            <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
+                                alt="imagen del input" class="img-input">
+                        </div>
+                        <div class="cont-input">
+                            <label for="valor" class="label-input">¿Cuál es el valor de la cuota? <span class="tooltip"
+                                    mensaje="Es el pago periódico que te comprometiste a realizar con el fin de devolver el financiamiento que se te otorgó."><img
+                                        src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
+                                        alt="icono-tooltip" class="icono-tooltip"></span></label>
+                            <input type="text" name="valor" id="valor" class="input">
+                            <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-monto.svg"
+                                alt="imagen del input" class="img-input">
+                        </div>
+                        <div class="cont-input">
+                            <label for="frecuencia" class="label-input">¿Con qué frecuencia recibes ingresos? <span
+                                    class="tooltip"
+                                    mensaje="Es la frecuencia en la cual recibes ingresos de dinero."><img
+                                        src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
+                                        alt="icono-tooltip" class="icono-tooltip"></span></label>
+                            <select type="text" name="frecuencia" id="frecuencia" class="input">
+                                <option value="Diario" selected>Selecciona una opción</option>
+                                <option value="Diario">Diario</option>
+                                <option value="Diario">Semanal</option>
+                                <option value="Diario">Quincenal</option>
+                                <option value="Diario">Mensual</option>
+                            </select>
+                            <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-fecha-hora.svg"
+                                alt="imagen del input" class="img-input">
+                        </div>
 
 
 
 
-                </div>
-                <button class="btn-calcular">Calcular</button>
-            </section>
-            <section class="resultado seccion">
-                <p>Este es el valor que debes ahorrar</p>
-                <p>[Frecuencia]</p>
-                <h3>[Nombre]</h3>
-                <p>¡Si cumples con esta meta de ahorro no tendrás que preocuparte cuando llegue el día de pago de tu
-                    cuota!</p>
-            </section>
-        </article>
+                    </div>
+                    <button class="btn-calcular">Calcular</button>
+                </section>
+                <section class="resultado seccion">
+                    <p>Este es el valor que debes ahorrar</p>
+                    <p>[Frecuencia]</p>
+                    <h3>[Nombre]</h3>
+                    <p>¡Si cumples con esta meta de ahorro no tendrás que preocuparte cuando llegue el día de pago de tu
+                        cuota!</p>
+                </section>
+            </article>
 
-        <article id="simulador_ahorro" class="contenedor">
-            <section class="resultado seccion">
-                <h2>Estos son nuestros consejos</h2>
-                <div class="contenedor-consejos">
-                    <div class="consejo">
-                        <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg" alt="">
-                        <p>Paga primero tu préstamo <br> más caro</p>
+            <article id="consejos_ahorro" class="contenedor">
+                <section class="resultado seccion">
+                    <h2>Estos son nuestros consejos</h2>
+                    <div class="contenedor-consejos">
+                        <div class="consejo">
+                            <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg"
+                                alt="">
+                            <p>Paga primero tu préstamo <br> más caro</p>
+                        </div>
+                        <div class="consejo">
+                            <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg"
+                                alt="">
+                            <p>No firmes algo que no <br> entiendes</p>
+                        </div>
+                        <div class="consejo">
+                            <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg"
+                                alt="">
+                            <p>Intenta no gastar más de <br>lo que ganas</p>
+                        </div>
+                        <div class="consejo">
+                            <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg"
+                                alt="">
+                            <p>No dejes el ahorro para<br>fin de mes</p>
+                        </div>
+                        <div class="consejo">
+                            <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg"
+                                alt="">
+                            <p>Realiza siempre un<br>presupuesto</p>
+                        </div>
+                        <div class="consejo-kiyosaki">
+                            <p class="frase">"No trabajes por el dinero, deja que el dinero trabaje por ti"</p>
+                            <p>-Robert Kiyosaki</p>
+                        </div>
                     </div>
-                    <div class="consejo">
-                        <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg" alt="">
-                        <p>No firmes algo que no <br> entiendes</p>
-                    </div>
-                    <div class="consejo">
-                        <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg" alt="">
-                        <p>Intenta no gastar más de <br>lo que ganas</p>
-                    </div>
-                    <div class="consejo">
-                        <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg" alt="">
-                        <p>No dejes el ahorro para<br>fin de mes</p>
-                    </div>
-                    <div class="consejo">
-                        <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg" alt="">
-                        <p>Realiza siempre un<br>presupuesto</p>
-                    </div>
-                    <div class="consejo-kiyosaki">
-                        <p class="frase">"No trabajes por el dinero, deja que el dinero trabaje por ti"</p>
-                        <p>-Robert Kiyosaki</p>
-                    </div>
-                </div>
-            </section>
-        </article>
+                </section>
+            </article>
+        </div>
     </main>
 </body>
-
+<script src="index.js"></script>
 </html>

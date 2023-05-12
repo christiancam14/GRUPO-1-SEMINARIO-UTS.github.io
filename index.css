@@ -14,6 +14,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.contenedor-1200 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 header {
     background-color: #333;
     color: #fff;
@@ -22,6 +28,12 @@ header {
     align-items: center;
     padding: 20px;
     user-select: none;
+}
+
+header .contenedor-1200{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .titulo {
@@ -58,22 +70,31 @@ header {
 
 /* Estilos ahorro */
 
+main {
+    background: rgb(196, 117, 235);
+    background: -moz-radial-gradient(circle, rgb(158, 48, 255) 0%, rgba(121, 9, 113, 1) 100%, rgba(255, 75, 254, 1) 100%);
+    background: -webkit-radial-gradient(circle, rgb(158, 48, 255) 0%, rgba(121, 9, 113, 1) 100%, rgba(255, 75, 254, 1) 100%);
+    background: radial-gradient(circle, rgb(158, 48, 255) 0%, rgba(121, 9, 113, 1) 100%, rgba(255, 75, 254, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c45cf7", endColorstr="#ff4bfe", GradientType=1);
+}
+
+.contenedor:first-child {
+    display: flex;
+}
+
+.contenedor:not(:first-child) {
+    display: none;
+}
+
 .contenedor {
-    width: 100vw;
-    /* height: 100vh; */
-    background: red;
+    
+    min-height: 100vh;
     text-align: center;
     color: white;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     /* overflow: hidden; */
-
-    background: rgb(196, 117, 235);
-    background: -moz-radial-gradient(circle, rgb(158, 48, 255) 0%, rgba(121, 9, 113, 1) 100%, rgba(255, 75, 254, 1) 100%);
-    background: -webkit-radial-gradient(circle, rgb(158, 48, 255) 0%, rgba(121, 9, 113, 1) 100%, rgba(255, 75, 254, 1) 100%);
-    background: radial-gradient(circle, rgb(158, 48, 255) 0%, rgba(121, 9, 113, 1) 100%, rgba(255, 75, 254, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c45cf7", endColorstr="#ff4bfe", GradientType=1);
 
     .seccion {
         padding: 20px;
