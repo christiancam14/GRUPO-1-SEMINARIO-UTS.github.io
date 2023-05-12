@@ -21,6 +21,7 @@ header {
     align-items: center;
     padding: 20px;
     user-select: none;
+    z-index: 10;
 }
 
 header .contenedor-1200{
@@ -90,12 +91,10 @@ main {
     /* overflow: hidden; */
 
     .seccion {
-        padding: 20px;
+        padding: 20px 10px;
         display: flex;
         flex-direction: column;
         gap: 16px;
-
-
     }
 
     .simulador {
@@ -131,7 +130,7 @@ main {
                     display: flex;
                     flex-direction: row;
                     gap: 10px;
-
+                    text-align: initial;
                     .icono-tooltip {
                         width: 22px;
                         filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(268deg) brightness(106%) contrast(102%);
@@ -254,6 +253,11 @@ main {
         color: white;
     }
 
+    .label-input{
+        font-size: 16px !important;
+        margin-bottom: 8px !important;
+    }
+
     .menu-principal ul {
         display: block;
         margin: 0;
@@ -289,6 +293,7 @@ main {
 
     .input-menu:checked ~ .menu-principal{
         display: block;
+        z-index: 5;
     }
     
     .icono-menu .cerrar-menu{
@@ -311,10 +316,6 @@ main {
     }
 
     .contenedor {
-        
-        .seccion {
-        
-        }
     
         .simulador {
         
@@ -345,22 +346,22 @@ main {
             .contenedor-consejos {
                 display: flex;
                 flex-wrap: wrap;
-                flex-direction: row;
+                flex-direction: column;
                 width: 80%;
                 margin: 0 auto;
+                gap: 20px;
                 .consejo {
-                    width: 50%;
+                    width: 100%;
                     display: flex;
                     flex-direction: row;
                     align-content: center;
                     align-items: center;
                     gap: 10px;
                 }
-    
                 .consejo-kiyosaki{
-                    
-                    .frase{
-                        
+                    width: 100%;
+                    .frase {
+                        max-width: 100%;
                     }
                 }
             }
