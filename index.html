@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,12 +33,12 @@
                     </li>
                     <li>
                         <input type="radio" id="opcionAhorro" name="opcion_simulador" value="2">
-                    <label for="opcionAhorro">Ahorro</label>
+                        <label for="opcionAhorro">Ahorro</label>
                     </li>
                     <li>
                         <input type="radio" id="opcionTips" name="opcion_simulador" value="3">
                         <label for="opcionTips">Tips financieros</label>
-                    </li> 
+                    </li>
 
                 </ul>
             </nav>
@@ -49,22 +50,72 @@
             <article id="simulador_cdt" class="contenedor">
                 <section class="simulador seccion">
                     <h2 class="tit-principal">Simula tu CDT</h2>
-                    <p class="desc-principal">Queremos ayudarte a organizar tu dinero y juntos lograr cumplir con el
-                        pago de
-                        tus deudas financieras. <br>¡Empecemos!</p>
+                    <p class="desc-principal">Los CDT ofrecen rendimientos a una tasa fija que te aseguran una
+                        rentabilidad libre de riesgo a plazos fijos <br> <br><strong>¡Empecemos!</strong></p>
                     <div class="cont-formulario">
+                        <div class="cont-input">
+                            <label for="nombre" class="label-input">¿Qué monto deseas invertir?</label>
+                            <input type="text" name="nombre" id="nombre" class="input">
+                            <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
+                                alt="imagen del input" class="img-input">
+                        </div>
+                        <div class="cont-input">
+                            <label for="monto" class="label-input">¿A qué plazo deseas invertir tu dinero?<span
+                                    class="tooltip"
+                                    mensaje="El monto es la suma total de dinero que la institución financiera te está prestando y que tendrás que devolver dentro de un plazo determinado pagando una cantidad de interés."><img
+                                        src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
+                                        alt="icono-tooltip" class="icono-tooltip"></span></label>
+                            <input type="text" name="monto" id="monto" class="input">
+                            <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-monto.svg"
+                                alt="imagen del input" class="img-input">
+                        </div>
+                        <div class="cont-input">
+                            <label for="cuotas" class="label-input">¿Qué tasa te de interés te ofrecen? <span class="tooltip"
+                                    mensaje="El plazo del préstamo es la cantidad de tiempo que tienes para pagar el préstamo."><img
+                                        src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
+                                        alt="icono-tooltip" class="icono-tooltip"></span></label>
+                            <input type="text" name="cuotas" id="cuotas" class="input">
+                            <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
+                                alt="imagen del input" class="img-input">
+                        </div>
                     </div>
+                    <button class="btn-calcular">Calcular</button>
                 </section>
             </article>
 
             <article id="simulador_credito" class="contenedor">
                 <section class="simulador seccion">
                     <h2 class="tit-principal">Simula tu crédito</h2>
-                    <p class="desc-principal">Queremos ayudarte a organizar tu dinero y juntos lograr cumplir con el
-                        pago de
-                        tus deudas financieras. <br>¡Empecemos!</p>
-                    <div class="cont-formulario">
-                    </div>
+                    <p class="desc-principal">Los créditos pueden ser una herramienta útil si sabes manejarla pero debes
+                        tener cuidado para usarlos sabiamente. <br> <br><strong>¡Empecemos!</strong></p>
+                        <div class="cont-formulario">
+                            <div class="cont-input">
+                                <label for="nombre" class="label-input">¿Qué monto deseas solicitar?</label>
+                                <input type="text" name="nombre" id="nombre" class="input">
+                                <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
+                                    alt="imagen del input" class="img-input">
+                            </div>
+                            <div class="cont-input">
+                                <label for="monto" class="label-input">¿A qué plazo deseas solicitar tu crédito?<span
+                                        class="tooltip"
+                                        mensaje="El monto es la suma total de dinero que la institución financiera te está prestando y que tendrás que devolver dentro de un plazo determinado pagando una cantidad de interés."><img
+                                            src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
+                                            alt="icono-tooltip" class="icono-tooltip"></span></label>
+                                <input type="text" name="monto" id="monto" class="input">
+                                <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-monto.svg"
+                                    alt="imagen del input" class="img-input">
+                            </div>
+                            <div class="cont-input">
+                                <label for="cuotas" class="label-input">¿Qué tasa te de interés te ofrecen? <span class="tooltip"
+                                        mensaje="El plazo del préstamo es la cantidad de tiempo que tienes para pagar el préstamo."><img
+                                            src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
+                                            alt="icono-tooltip" class="icono-tooltip"></span></label>
+                                <input type="text" name="cuotas" id="cuotas" class="input">
+                                <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
+                                    alt="imagen del input" class="img-input">
+                            </div>
+                        </div>
+                        <button class="btn-calcular">Calcular</button>
                 </section>
             </article>
 
@@ -73,7 +124,7 @@
                     <h2 class="tit-principal">Simula tu ahorro</h2>
                     <p class="desc-principal">Queremos ayudarte a organizar tu dinero y juntos lograr cumplir con el
                         pago de
-                        tus deudas financieras. <br>¡Empecemos!</p>
+                        tus deudas financieras. <br> <br><strong>¡Empecemos!</strong></p>
                     <div class="cont-formulario">
                         <div class="cont-input">
                             <label for="nombre" class="label-input">¿Cómo te llamas?</label>
@@ -144,45 +195,44 @@
             <article id="consejos_ahorro" class="contenedor">
                 <section class="resultado seccion">
                     <h2 class="tit-principal">Estos son nuestros consejos</h2>
-                    <p class="desc-principal">Queremos ayudarte a organizar tu dinero y juntos lograr cumplir con el
-                        pago de
-                        tus deudas financieras. <br>¡Empecemos!</p>
+                    <p class="desc-principal">Queremos compartirte algunas recomendaciones para el manejo de todas tus finanzas <br> <br><strong>¡Empecemos!</strong></p>
                     <div class="cont-formulario">
-                    <div class="contenedor-consejos">
-                        <div class="consejo">
-                            <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg"
-                                alt="">
-                            <p>Paga primero tu préstamo <br> más caro</p>
+                        <div class="contenedor-consejos">
+                            <div class="consejo">
+                                <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg"
+                                    alt="">
+                                <p>Paga primero tu préstamo <br> más caro</p>
+                            </div>
+                            <div class="consejo">
+                                <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg"
+                                    alt="">
+                                <p>No firmes algo que no <br> entiendes</p>
+                            </div>
+                            <div class="consejo">
+                                <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg"
+                                    alt="">
+                                <p>Intenta no gastar más de <br>lo que ganas</p>
+                            </div>
+                            <div class="consejo">
+                                <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg"
+                                    alt="">
+                                <p>No dejes el ahorro para<br>fin de mes</p>
+                            </div>
+                            <div class="consejo">
+                                <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg"
+                                    alt="">
+                                <p>Realiza siempre un<br>presupuesto</p>
+                            </div>
+                            <div class="consejo-kiyosaki">
+                                <p class="frase">"No trabajes por el dinero, deja que el dinero trabaje por ti"</p>
+                                <p>-Robert Kiyosaki</p>
+                            </div>
                         </div>
-                        <div class="consejo">
-                            <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg"
-                                alt="">
-                            <p>No firmes algo que no <br> entiendes</p>
-                        </div>
-                        <div class="consejo">
-                            <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg"
-                                alt="">
-                            <p>Intenta no gastar más de <br>lo que ganas</p>
-                        </div>
-                        <div class="consejo">
-                            <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg"
-                                alt="">
-                            <p>No dejes el ahorro para<br>fin de mes</p>
-                        </div>
-                        <div class="consejo">
-                            <img src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito5.svg"
-                                alt="">
-                            <p>Realiza siempre un<br>presupuesto</p>
-                        </div>
-                        <div class="consejo-kiyosaki">
-                            <p class="frase">"No trabajes por el dinero, deja que el dinero trabaje por ti"</p>
-                            <p>-Robert Kiyosaki</p>
-                        </div>
-                    </div>
                 </section>
             </article>
         </div>
     </main>
 </body>
 <script src="index.js"></script>
+
 </html>
