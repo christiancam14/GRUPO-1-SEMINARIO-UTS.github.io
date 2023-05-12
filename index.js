@@ -3,6 +3,12 @@ const opciones = document.querySelectorAll('input[name="opcion_simulador"]');
 const contenedores = document.querySelectorAll('.contenedor');
 const menu = document.querySelector('#menu');
 
+// Obtiene el ancho de la pantalla
+// const anchoPantalla = window.innerWidth;
+
+// alert(`El ancho de la pantalla es: ${anchoPantalla}px`);
+
+
 // Añadimos un evento de cambio a cada elemento de radio
 opciones.forEach((opcion) => {
     opcion.addEventListener('change', (event) => {

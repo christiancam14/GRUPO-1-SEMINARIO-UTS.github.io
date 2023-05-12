@@ -7,13 +7,6 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
 .contenedor-1200 {
     width: 100%;
     max-width: 1200px;
@@ -249,7 +242,7 @@ main {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
     .menu-principal {
         display: none;
         width: 100%;
@@ -270,8 +263,12 @@ main {
     .menu-principal li {
         display: block;
         margin: 0;
-        padding: 10px 0;
+        padding: 16px 0;
         border-bottom: 1px solid #fff;
+    }
+
+    .menu-principal li input{
+        opacity: 0;
     }
 
     .menu-principal li a{
@@ -371,7 +368,7 @@ main {
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .menu-principal {
         display: flex;
     }
