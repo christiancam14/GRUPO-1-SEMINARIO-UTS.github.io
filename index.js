@@ -150,8 +150,9 @@ calcular_ahorro.addEventListener("click", () => {
     let periocidad = "";
     let factor = 1;
 
-    let tasa = calcularTIEA(montoSimular, cuotasSimular, valorSimular);
-
+    let tasa2 = '';
+    let tasa = calcularTasa( montoSimular, cuotasSimular, valorSimular);
+    //  $ 1066185
 
     switch (frecuenciaAhorro.value){
         case "Diario":
@@ -174,21 +175,41 @@ calcular_ahorro.addEventListener("click", () => {
     
     let resultado = valorSimular / factor;
     let resultado_ahorro = document.getElementById('resultado_ahorro');
-    resultado_ahorro.innerHTML = `<p>${tasa}Si tienes responsabilidades por  ${'$'+valorCuota.value} tendrás que ahorrar aproximadamente ${periocidad} ${'$'+Intl.NumberFormat('de-DE').format(resultado)}</p><p>Recuerda que cumplir tus responsabilidades financieras te abre puertas</p>`;
+
+    if( tasa == null ){
+        resultado_ahorro.innerHTML = `<p>Si tienes responsabilidades por  ${'$'+valorCuota.value} tendrás que ahorrar aproximadamente ${periocidad} ${'$'+Intl.NumberFormat('de-DE').format(resultado)}</p><p>Recuerda que cumplir tus responsabilidades financieras te abre puertas</p>`;
+    } else {
+        resultado_ahorro.innerHTML = `<p>Tu crédito tiene una tasa aproximada de ${tasa}.</p><p>Recuerda que la compra de cartera suele ser una opción interesante para disminuir tu pago de intereses pero debes estudiar bien si es viable.</p><p>Si tienes responsabilidades por  ${'$'+valorCuota.value} tendrás que ahorrar aproximadamente ${periocidad} ${'$'+Intl.NumberFormat('de-DE').format(resultado)}</p><p>Recuerda que cumplir tus responsabilidades financieras te abre puertas</p>`;
+    }
 })
 
-function calcularTasa(monto, cuotas, cuota) {
-    let tasa = 0.01
-    while (true) {
-      const numerador = cuota * ((1 + tasa) ** cuotas - 1)
-      const denominador = monto * ((1 + tasa) ** cuotas) - 1
-        const nuevaTasa = tasa - (numerador / denominador)
-        if (Math.abs(nuevaTasa - tasa) < 0.0001) {
-            break
+function calcularTasa(monto, plazo, cuotaDeseada) {
+    let tasaInicial = 0.01; // Tasa de interés inicial para comenzar a iterar
+    let tasaActual = tasaInicial;
+    let cuotaActual = calcularCuota(monto, plazo, tasaActual);
+
+    while (Math.abs(cuotaActual - cuotaDeseada) > 0.5) { // Iterar mientras la diferencia sea mayor a 0.01
+        console.log( tasaActual + " Diferencia :" + Math.abs(cuotaActual - cuotaDeseada));
+        tasaActual += 0.01; // Incrementar la tasa en 0.01
+        cuotaActual = calcularCuota(monto, plazo, tasaActual);
+        // 1066185
+        // console.log("Cuota actual" + cuotaActual);
+        // console.log("Tasa actual" + tasaActual);
+        if (tasaActual > 100) { // Salir del ciclo si la tasa supera un límite razonable
+            console.log("La función no converge");
+            return null;
         }
-        tasa = nuevaTasa
     }
-    return tasa * 100
+
+    return tasaActual.toFixed(2); // Redondear la tasa a dos decimales y devolverla
+}
+
+
+
+function calcularDerivada(monto, plazo, tasa) {
+    const interesMensual = tasa / 1200;
+    const denominador = Math.pow(1 + interesMensual, -plazo);
+    return monto * denominador / Math.pow(1 - denominador, 2) * (-plazo * interesMensual - 1);
 }
 
 function calcularTIEA(monto, cuotas, valorCuota) {
