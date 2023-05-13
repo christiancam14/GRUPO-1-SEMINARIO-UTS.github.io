@@ -366,6 +366,10 @@ main {
         display: none;
     }
 
+    .desc-principal {
+        max-width: 90%;
+    }
+
     .contenedor {
     
         .simulador {
