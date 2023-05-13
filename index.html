@@ -25,19 +25,31 @@
 
                     <li>
                         <input type="radio" id="opcionCdt" name="opcion_simulador" value="0" checked>
-                        <label for="opcionCdt">CDT</label>
+                        <label for="opcionCdt">
+                            <img src="https://cdn-icons-png.flaticon.com/512/566/566581.png" width="24px" alt="">
+                            CDT
+                        </label>
                     </li>
                     <li>
                         <input type="radio" id="opcionCredito" name="opcion_simulador" value="1">
-                        <label for="opcionCredito">Crédito</label>
+                        <label for="opcionCredito">
+                            <img src="https://cdn-icons-png.flaticon.com/512/784/784713.png" width="24px" alt="">
+                            Crédito
+                        </label>
                     </li>
                     <li>
                         <input type="radio" id="opcionAhorro" name="opcion_simulador" value="2">
-                        <label for="opcionAhorro">Ahorro</label>
+                        <label for="opcionAhorro">
+                            <img src="https://cdn-icons-png.flaticon.com/512/4578/4578205.png" width="24px" alt="">
+                            Ahorro
+                        </label>
                     </li>
                     <li>
                         <input type="radio" id="opcionTips" name="opcion_simulador" value="3">
-                        <label for="opcionTips">Tips financieros</label>
+                        <label for="opcionTips">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3336/3336721.png" width="24px" alt="">
+                            Tips financieros
+                        </label>
                     </li>
 
                 </ul>
@@ -51,7 +63,7 @@
                 <section class="simulador seccion">
                     <h2 class="tit-principal">Simula tu CDT</h2>
                     <p class="desc-principal">Los CDT ofrecen rendimientos a una tasa fija que te aseguran una
-                        rentabilidad libre de riesgo a plazos fijos <br> <br><strong>¡Empecemos!</strong></p>
+                        rentabilidad libre de riesgo a plazos fijos.</p>
                     <div class="cont-formulario">
                         <div class="cont-input">
                             <label for="montoCdt" class="label-input">¿Qué monto deseas invertir?</label>
@@ -61,10 +73,8 @@
                         </div>
                         <div class="cont-input">
                             <label for="plazoCdt" class="label-input">¿A cuántos meses deseas invertir tu dinero?<span
-                                    class="tooltip"
-                                    mensaje="El monto es la suma total de dinero que la institución financiera te está prestando y que tendrás que devolver dentro de un plazo determinado pagando una cantidad de interés."><img
-                                        src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
-                                        alt="icono-tooltip" class="icono-tooltip"></span></label>
+                                    class="tooltips"
+                                    mensaje="El monto es la suma total de dinero que la institución financiera te está prestando y que tendrás que devolver dentro de un plazo determinado pagando una cantidad de interés."></span></label>
                             <input type="tel" name="plazoCdt" id="plazoCdt" class="input" onkeyup="this.value=Numeros(this.value)" maxlength="2">
                             <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-monto.svg"
                                 alt="imagen del input" class="img-input">
@@ -72,7 +82,7 @@
                         <div class="cont-input">
                             <label for="tasaCdt" class="label-input">¿Qué tasa te de interés te ofrecen? (E.A.)<span
                                     class="tooltip"
-                                    mensaje="El plazo del préstamo es la cantidad de tiempo que tienes para pagar el préstamo."><img
+                                    mensaje="Tasa efectiva anual: Es la tasa que calcula el valor del interés esperado en un año."><img
                                         src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
                                         alt="icono-tooltip" class="icono-tooltip"></span></label>
                             <input type="tel" name="tasaCdt" id="tasaCdt" class="input" onkeyup="this.value=NumerosDecimales(this.value)" maxlength="5">
@@ -90,7 +100,7 @@
                 <section class="simulador seccion">
                     <h2 class="tit-principal">Simula tu crédito</h2>
                     <p class="desc-principal">Los créditos pueden ser una herramienta útil si sabes manejarla pero debes
-                        tener cuidado para usarlos sabiamente. <br> <br><strong>¡Empecemos!</strong></p>
+                        tener cuidado y usarlos sabiamente.</p>
                     <div class="cont-formulario">
                         <div class="cont-input">
                             <label for="montoCredito" class="label-input">¿Qué monto deseas solicitar?</label>
@@ -101,7 +111,7 @@
                         <div class="cont-input">
                             <label for="plazoCredito" class="label-input">¿A qué plazo deseas solicitar tu crédito?<span
                                     class="tooltip"
-                                    mensaje="El monto es la suma total de dinero que la institución financiera te está prestando y que tendrás que devolver dentro de un plazo determinado pagando una cantidad de interés."><img
+                                    mensaje="Recuerda que a mayor plazo más intereses deberás pagar."><img
                                         src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
                                         alt="icono-tooltip" class="icono-tooltip"></span></label>
                             <input type="tel" name="plazoCredito" id="plazoCredito" class="input" onkeyup="this.value=Numeros(this.value)" maxlength="2">
@@ -111,7 +121,7 @@
                         <div class="cont-input">
                             <label for="tasaCredito" class="label-input">¿Qué tasa te de interés te ofrecen? (E.A.)<span
                                     class="tooltip"
-                                    mensaje="El plazo del préstamo es la cantidad de tiempo que tienes para pagar el préstamo."><img
+                                    mensaje="Recuerda que la tasa puede variar dependiendo de la modalidad de crédito."><img
                                         src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
                                         alt="icono-tooltip" class="icono-tooltip"></span></label>
                             <input type="tel" name="tasaCredito" id="tasaCredito" class="input" onkeyup="this.value=NumerosDecimales(this.value)" maxlength="5">
@@ -130,14 +140,9 @@
                     <h2 class="tit-principal">Simula tu ahorro</h2>
                     <p class="desc-principal">Queremos ayudarte a organizar tu dinero y juntos lograr cumplir con el
                         pago de
-                        tus deudas financieras. <br> <br><strong>¡Empecemos!</strong></p>
+                        tus deudas financieras. </p>
                     <div class="cont-formulario">
-                        <div class="cont-input">
-                            <label for="nombreAhorro" class="label-input">¿Cómo te llamas?</label>
-                            <input type="text" name="nombreAhorro" id="nombreAhorro" class="input">
-                            <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
-                                alt="imagen del input" class="img-input">
-                        </div>
+                        
                         <div class="cont-input">
                             <label for="montoAhorro" class="label-input">¿Cuál es el monto de tu crédito? <span
                                     class="tooltip"
@@ -154,7 +159,7 @@
                                     mensaje="El plazo del préstamo es la cantidad de tiempo que tienes para pagar el préstamo."><img
                                         src="https://crezcamos.com/wp-content/uploads/2022/10/icono-landing-credito2.svg"
                                         alt="icono-tooltip" class="icono-tooltip"></span></label>
-                            <input type="tel" name="cuotasAhorro" id="cuotasAhorro" class="input" onkeyup="this.value=Numeros(this.value)" maxlength="4">
+                            <input type="tel" name="cuotasAhorro" id="cuotasAhorro" class="input" onkeyup="this.value=Numeros(this.value)" maxlength="9">
                             <img src="https://crezcamos.com/wp-content/uploads/2022/08/icono-denunciante.svg"
                                 alt="imagen del input" class="img-input">
                         </div>
@@ -190,20 +195,14 @@
                     <div id="resultado_ahorro" class="resultado">
                     </div>
                 </section>
-                <section class="resultado seccion">
-                    <p>Este es el valor que debes ahorrar</p>
-                    <p>[Frecuencia]</p>
-                    <h3>[Nombre]</h3>
-                    <p>¡Si cumples con esta meta de ahorro no tendrás que preocuparte cuando llegue el día de pago de tu
-                        cuota!</p>
-                </section>
+                
             </article>
 
             <article id="consejos_ahorro" class="contenedor">
                 <section class="resultado seccion">
                     <h2 class="tit-principal">Estos son nuestros consejos</h2>
                     <p class="desc-principal">Queremos compartirte algunas recomendaciones para el manejo de todas tus
-                        finanzas <br> <br><strong>¡Empecemos!</strong></p>
+                        finanzas </p>
                     <div class="cont-formulario">
                         <div class="contenedor-consejos">
                             <div class="consejo">
