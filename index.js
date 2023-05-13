@@ -80,7 +80,7 @@ btn_calcular_cdt.addEventListener("click", () => {
     let resultado = calcularCDT(montoSimular, plazoSimular, tasaSimular);
 
     let resultado_cdt = document.getElementById('resultado_cdt');
-    resultado_cdt.innerHTML = `<p>Si inviertes ${'$'+monto.value} a ${plazo.value} meses recibirás ganancias por ${'$'+Intl.NumberFormat('de-DE').format(resultado * 0.96)}</p><br><p>Ten en cuenta a este valor ya se le restó la retenfuente (4% sobre tus ganancias)</p>`;
+    resultado_cdt.innerHTML = `<p>Si inviertes ${'$'+monto.value} a ${plazo.value} meses recibirás ganancias por <strong> ${'$'+Intl.NumberFormat('de-DE').format(resultado * 0.96)} </strong></p><br><p>Ten en cuenta a este valor ya se le restó la retenfuente (4% sobre tus ganancias)</p>`;
 })
 
 function calcularCDT(monto, plazo, tasa) {
