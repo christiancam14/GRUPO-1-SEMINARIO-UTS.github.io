@@ -80,14 +80,35 @@ btn_calcular_cdt.addEventListener("click", () => {
     let resultado = calcularCDT(montoSimular, plazoSimular, tasaSimular);
 
     let resultado_cdt = document.getElementById('resultado_cdt');
-    resultado_cdt.innerHTML = `<p>Si inviertes ${'$'+monto.value} a ${plazo.value} meses recibirás ganancias por <strong> ${'$'+Intl.NumberFormat('de-DE').format(resultado * 0.96)} </strong></p><br><p>Ten en cuenta a este valor ya se le restó la retenfuente (4% sobre tus ganancias)</p>`;
+    resultado_cdt.innerHTML = `<p>Si inviertes ${'$'+monto.value} a ${plazo.value} meses recibirás ganancias por <strong> ${'$'+Intl.NumberFormat('de-DE').format(resultado)} </strong></p><br><p>Ten en cuenta a este valor ya se le restó la retenfuente (4% sobre tus ganancias)</p>`;
 })
 
-function calcularCDT(monto, plazo, tasa) {
+function calcularCDT2(monto, plazo, tasa) {
     let interes = (tasa) / 12;
     let valorFinal = (monto * (1 + interes / 100) ** plazo) - monto;
     
     return valorFinal.toFixed(2);
+}
+
+function calcularCDT(valorCDT, plazoCdt, tasaInteres){
+    plazoCdt = plazoCdt * 30;
+    console.log("valorCDT => " + valorCDT);
+    valorCDT = parseInt(valorCDT);
+    tasaPeriodica = (Math.pow(1 + tasaInteres/100, plazoCdt/360)-1)*100;
+    interesGenerado = (tasaPeriodica / 100) * valorCDT;
+    retencion = interesGenerado * 4 / 100;
+    ingresosTotales = interesGenerado - retencion;
+
+    console.log("tasaPeriodica => " + tasaPeriodica);
+    console.log("interesGenerado => " + interesGenerado + ". Retencion => " + retencion + " total => " );
+    console.log("ingresosTotales => " + ingresosTotales);
+    console.log("retencion => " + retencion);
+    // console.log("plazoCdt => " + plazoCdt);
+    console.log("valorCDT => " + valorCDT);
+    console.log("plazoCdt => " + plazoCdt);
+    console.log("tasaInteres => " + tasaInteres);
+
+    return ingresosTotales;
 }
 
 // Lógica simular crédito
