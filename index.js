@@ -92,15 +92,6 @@ function calcularCDT(valorCDT, plazoCdt, tasaInteres){
     retencion = interesGenerado * 4 / 100;
     ingresosTotales = interesGenerado - retencion;
 
-    console.log("tasaPeriodica => " + tasaPeriodica);
-    console.log("interesGenerado => " + interesGenerado + ". Retencion => " + retencion + " total => " );
-    console.log("ingresosTotales => " + ingresosTotales);
-    console.log("retencion => " + retencion);
-    // console.log("plazoCdt => " + plazoCdt);
-    console.log("valorCDT => " + valorCDT);
-    console.log("plazoCdt => " + plazoCdt);
-    console.log("tasaInteres => " + tasaInteres);
-
     return ingresosTotales;
 }
 
