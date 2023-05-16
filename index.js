@@ -80,15 +80,8 @@ btn_calcular_cdt.addEventListener("click", () => {
     let resultado = calcularCDT(montoSimular, plazoSimular, tasaSimular);
 
     let resultado_cdt = document.getElementById('resultado_cdt');
-    resultado_cdt.innerHTML = `<p>Si inviertes ${'$'+monto.value} a ${plazo.value} meses recibirás ganancias por <strong> ${'$'+Intl.NumberFormat('de-DE').format(resultado)} </strong></p><br><p>Ten en cuenta a este valor ya se le restó la retenfuente (4% sobre tus ganancias)</p>`;
+    resultado_cdt.innerHTML = `<p>Si inviertes ${'$'+monto.value} a ${plazo.value} meses recibirás ganancias aproximadas de <strong> ${'$'+Intl.NumberFormat('de-DE').format(resultado)} </strong></p><br><p>Ten en cuenta a este valor ya se le restó la retefuente (4% sobre tus ganancias)</p>`;
 })
-
-function calcularCDT2(monto, plazo, tasa) {
-    let interes = (tasa) / 12;
-    let valorFinal = (monto * (1 + interes / 100) ** plazo) - monto;
-    
-    return valorFinal.toFixed(2);
-}
 
 function calcularCDT(valorCDT, plazoCdt, tasaInteres){
     plazoCdt = plazoCdt * 30;
@@ -135,7 +128,9 @@ calcular_credito.addEventListener("click", () => {
     let resultado = calcularCuota(montoSimular, plazoSimular, tasaSimular);
 
     let resultado_credito = document.getElementById('resultado_credito');
-    resultado_credito.innerHTML = `<p>Si solicitas  ${'$'+monto.value} a ${plazo.value} meses tendrás cuotas de ${'$'+Intl.NumberFormat('de-DE').format(resultado)}</p><p>Terminarás pagando apróximadamente ${'$'+Intl.NumberFormat('de-DE').format(resultado*plazoSimular)}</p>`;
+    resultado_credito.innerHTML = `<p>Si solicitas  ${'$'+monto.value} a ${plazo.value} meses tendrás cuotas aproximadas de ${'$'+Intl.NumberFormat('de-DE').format(resultado)}</p>
+    <p>Es probable que termines pagando un total de ${'$'+Intl.NumberFormat('de-DE').format(resultado*plazoSimular)}.</p>
+    <p style="font-size: 12px;">*Este valor no incluye otros conceptos que la entidad pueda cobrar dentro del crédito.</p>`;
 })
 
 function calcularCuota(monto, plazo, tasa) {
@@ -171,8 +166,7 @@ calcular_ahorro.addEventListener("click", () => {
     let periocidad = "";
     let factor = 1;
 
-    let tasa2 = '';
-    let tasa = calcularTasa( montoSimular, cuotasSimular, valorSimular);
+    // let tasa = calcularTasa( montoSimular, cuotasSimular, valorSimular);
     //  $ 1066185
 
     switch (frecuenciaAhorro.value){
@@ -197,11 +191,13 @@ calcular_ahorro.addEventListener("click", () => {
     let resultado = valorSimular / factor;
     let resultado_ahorro = document.getElementById('resultado_ahorro');
 
-    if( tasa == null ){
-        resultado_ahorro.innerHTML = `<p>Si tienes responsabilidades por  ${'$'+valorCuota.value} tendrás que ahorrar aproximadamente ${periocidad} ${'$'+Intl.NumberFormat('de-DE').format(resultado)}</p><p>Recuerda que cumplir tus responsabilidades financieras te abre puertas</p>`;
-    } else {
-        resultado_ahorro.innerHTML = `<p>Tu crédito tiene una tasa aproximada de ${tasa}.</p><p>Recuerda que la compra de cartera suele ser una opción interesante para disminuir tu pago de intereses pero debes estudiar bien si es viable.</p><p>Si tienes responsabilidades por  ${'$'+valorCuota.value} tendrás que ahorrar aproximadamente ${periocidad} ${'$'+Intl.NumberFormat('de-DE').format(resultado)}</p><p>Recuerda que cumplir tus responsabilidades financieras te abre puertas</p>`;
-    }
+    resultado_ahorro.innerHTML = `<p>Si tienes responsabilidades por  ${'$'+valorCuota.value} tendrás que ahorrar aproximadamente
+    ${periocidad} ${'$'+Intl.NumberFormat('de-DE').format(resultado)}.</p>
+    <p>Recuerda que un buen puntaje de crédito te abre las puertas de las entidades financieras.</p>`;
+    // if( tasa == null ){
+    // } else {
+    //     resultado_ahorro.innerHTML = `<p>Tu crédito tiene una tasa aproximada de ${tasa}.</p><p>Recuerda que la compra de cartera suele ser una opción interesante para disminuir tu pago de intereses pero debes estudiar bien si es viable.</p><p>Si tienes responsabilidades por  ${'$'+valorCuota.value} tendrás que ahorrar aproximadamente ${periocidad} ${'$'+Intl.NumberFormat('de-DE').format(resultado)}</p><p>Recuerda que cumplir tus responsabilidades financieras te abre puertas</p>`;
+    // }
 })
 
 function calcularTasa(monto, plazo, cuotaDeseada) {
